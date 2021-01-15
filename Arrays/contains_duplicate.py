@@ -1,12 +1,13 @@
 ''' Given an array of integers, find if the array contains any duplicates.
 Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct. '''
 from time import time
+import random
 
-nums_l = [0,13,5,20,31,50,20,2,7,0,11,15,0]
+nums_l = [random.randint(1, 100) for i in range(1000)]
 
 def brute_force(nums):
 	'''
-	Brute force solution (O(n))
+	Brute force solution (O(n)),  Space complexity O(n)
 
 	'''
 	nums_dict = {}
@@ -20,7 +21,7 @@ def brute_force(nums):
 
 def optimized_soln(nums):
 	'''
-	More optimized soltuion (O(n))
+	More optimized soltuion (O(n)),  Space complexity O(1)
 
 	'''
 	return True if len(set(nums)) < len(nums) else False
