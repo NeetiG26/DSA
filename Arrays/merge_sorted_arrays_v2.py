@@ -13,7 +13,7 @@ n = 20000
 
 def brute_force(arr1, m, arr2, n):
 	'''
-	Brute force solution O((n1+n2)log(n1+n2))
+	Brute force solution O((m+n)log(m+n))
 	'''
 	#sorted function has the time complexity on nlog(n)
 	arr1[m:] = arr2
@@ -21,7 +21,7 @@ def brute_force(arr1, m, arr2, n):
 	return arr1
 
 s1 = time()
-print('Brute Force: O((n1+n2)log(n1+n2)),  Space complexity O(1)')
+print('Brute Force: O((m+n)log(m+n)),  Space complexity O(1)')
 brute_force(nums1,m,nums2,n)
 print('Time Taken: ',(time()-s1))
 
