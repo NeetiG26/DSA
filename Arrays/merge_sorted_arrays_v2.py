@@ -37,6 +37,22 @@ def optimized_soln(arr1, m, arr2, n):
 			p2 = p2 + 1
 	return arr1
 
+def space_optimized(nums1,m,num2, n):
+	p1 = m - 1
+	p2 = n - 1
+
+	# And move p backwards through the array, each time writing
+	# the smallest value pointed at by p1 or p2.
+	for p in range(n + m - 1, -1, -1):
+		if p2 < 0:
+			break
+		if p1 >= 0 and nums1[p1] > nums2[p2]:
+			nums1[p] = nums1[p1]
+			p1 -= 1
+		else:
+			nums1[p] = nums2[p2]
+			p2 -= 1
+	return nums1
 
 s1 = time()
 print('Brute Force: O((m+n)log(m+n)),  Space complexity O(1)')
@@ -46,3 +62,7 @@ s2 = time()
 print('Optimized Soln: Time Complexity O(m+n),  Space complexity O(m)')
 optimized_soln(nums1,m,nums2,n)
 print('Time Taken: ',(time()-s2))
+s3 = time()
+print('Optimized Soln: Time Complexity O(m+n),  Space complexity O(1)')
+space_optimized(nums1,m,nums2,n)
+print('Time Taken: ',(time()-s3))
