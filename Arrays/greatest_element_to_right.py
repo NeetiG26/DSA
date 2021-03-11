@@ -21,8 +21,27 @@ def brute_force(arr):
 	arr[-1]=(-1)
 	return arr
 
+def optimized_soln(arr):
+	'''
+	More optimized soltuion Time Complexity O(n), Space Complexity O(n)
+
+	'''
+	out = [-1]
+	greatest = 0
+
+	for num in arr[::-1]:
+		if greatest < num:
+			greatest = num
+		out.append(greatest)
+	out.pop()
+	return out[::-1]
+
 
 s1 = time()
 print('Brute Force: O(n) solution, Space complexity O(n)')
 brute_force(nums)
 print('Time Taken: ',(time()-s1))
+s2 = time()
+print('Optimized Soln: O(n) solution, O(n) Space complexity')
+optimized_soln(nums)
+print('Time Taken: ',(time()-s2))
