@@ -17,7 +17,7 @@ def brute_force(arr):
 
 def optimized_soln(arr):
 	'''
-	More optimized soltuion (O(n)), Space Complexity O(n)
+	More optimized soltuion Time Complexity O(n), Space Complexity O(n)
 
 	'''
 	seen = set()
@@ -30,7 +30,7 @@ def optimized_soln(arr):
 
 
 s1 = time()
-print('Brute Force: O(n^2) solution, Space O(1)')
+print('Brute Force: O(n^2) solution, Space complexity O(1)')
 print(brute_force(nums))
 print('Time Taken: ',(time()-s1))
 s2 = time()
