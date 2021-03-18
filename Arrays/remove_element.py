@@ -21,8 +21,23 @@ def brute_force(arr, val):
 		arr.remove(val) #O(n)
 	return arr
 
+def optimized_soln(arr, val):
+	'''
+	Optimized soln with TC O(n), SC O(1)
+	'''
+	i = 0
+	for j in range(len(arr)):
+		if arr[j] != val:
+			arr[i] = arr[j]
+			i = i+1
+	return arr[:i]
+
 
 s1 = time()
 print('Brute Force: TC O(n^2), SC O(1)')
-print(brute_force(nums,val))
+brute_force(nums,val)
 print('Time Taken:', (time()-s1))
+s2 = time()
+print('Optimized Soln: O(n) solution, O(1) Space complexity')
+optimized_soln(nums, val)
+print('Time Taken: ',(time()-s2))
