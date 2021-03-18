@@ -17,7 +17,7 @@ def brute_force(arr, val):
 	'''
 
 	n = arr.count(val)
-	for i in range(n):
+	for i in range(n): #O(n)
 		arr.remove(val) #O(n)
 	return arr
 
