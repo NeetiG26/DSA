@@ -15,7 +15,6 @@ def brute_force(nums1, nums2):
     
     return ((set(nums1) - set1) - set2)
 
-# directy return the calculation to save space
 
 s1 = time()
 print('Brute Force: O(n),  Space complexity O(n)')
