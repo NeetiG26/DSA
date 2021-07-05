@@ -34,7 +34,33 @@ def brute_force(n: int) -> bool:
         else:
             return False
 
+def optimized_soln(n: int) -> bool:
+        
+    def get_next(num):
+        val = 0
+        for ele in str(num):
+            # print(ele)
+            val = val + (int(ele))**2
+        return val
+    
+    p1 = n
+    p2 = get_next(n)
+    
+    while True:
+        # print(p1, p2)
+        if p1 == p2 and p1!=1:
+            return False
+        elif p2 == 1:
+            return True
+        else:
+            p1 = get_next(p1)
+            p2 = get_next(get_next(p2))
+
 s1 = time()
 print('Brute Force: O(log(n)),  Space complexity O(1)')
 brute_force(19)
 print('Time Taken: ',(time()-s1))
+s2 = time()
+print('Optimized Soln: Time Complexity O(log(n)),  Space complexity O(1)')
+optimized_soln(19)
+print('Time Taken: ',(time()-s2))
