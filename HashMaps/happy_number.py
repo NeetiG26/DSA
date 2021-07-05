@@ -35,6 +35,6 @@ def brute_force(n: int) -> bool:
             return False
 
 s1 = time()
-print('Brute Force: O(n),  Space complexity O(1)')
+print('Brute Force: O(log(n)),  Space complexity O(1)')
 brute_force(19)
 print('Time Taken: ',(time()-s1))
