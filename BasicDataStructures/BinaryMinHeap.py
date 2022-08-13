@@ -18,17 +18,15 @@ class BinaryHeap:
             self.root = TreeNode(data)
             return
         else:
-            q = Stack()
+            q = Queue()
             current_node = self.root
             q.push(current_node)
             while current_node.right is not None and current_node.left is not None:
+                if current_node.left is not None:
+                    q.push(current_node.left)
                 if current_node.right is not None:
-                    current_node = current_node.right
-                else:
-                    current_node = current_node.left
-                q.push(current_node)
-        q.peek()
-        print("current node", current_node.data)
+                    q.push(current_node.right)
+                current_node = q.pop()
         if current_node.left:
             current_node.right = TreeNode(data)
             new_node = current_node.right
@@ -132,6 +130,8 @@ levelOrder(bh.root)
 # # inOrder(bst.root)
 bh.insert(2)
 bh.insert(7)
+print("Level order")
+levelOrder(bh.root)
 # # inOrder(bst.root)
 # # bst.remove(2)
 # # inOrder(bst.root)
