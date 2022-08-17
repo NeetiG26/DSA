@@ -19,3 +19,4 @@ def factorial_iterative(num: int) -> int:
 print(factorial_recursion(5))
 
 print(factorial_iterative(5))
+

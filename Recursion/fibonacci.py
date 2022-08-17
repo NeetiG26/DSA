@@ -24,3 +24,4 @@ def fibonacci_iterative(num: int) -> int:
 print(fibonacci_recursive(10))
 
 print(fibonacci_iterative(10))
+
