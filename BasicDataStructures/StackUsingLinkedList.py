@@ -19,7 +19,7 @@ class Stack:
 
     def pop(self):
         if self.top == None:
-            print('Empty Stack')
+            # print('Empty Stack')
             return
         temp = self.top
         self.top = self.top.next
@@ -39,27 +39,27 @@ class Stack:
             return 'Empty Stack'
         temp = self.top
         while temp.next:
-            print(temp.data , end=',')
+            print(temp.data, end=',')
             temp = temp.next
         print(temp.data)
         return ''
 
 
-stack = Stack()
-print(stack.is_empty())
-print(stack.peek())
-
-stack.push(1)
-print(stack.peek())
-stack.pop()
-print(stack.is_empty())
-print(stack.peek())
-print(stack)
-
-stack.push(2)
-stack.push(3)
-print(stack.is_empty())
-print(stack.peek())
-print(stack)
-stack.pop()
-print(stack)
+# stack = Stack()
+# print(stack.is_empty())
+# print(stack.peek())
+#
+# stack.push(1)
+# print(stack.peek())
+# stack.pop()
+# print(stack.is_empty())
+# print(stack.peek())
+# print(stack)
+#
+# stack.push(2)
+# stack.push(3)
+# print(stack.is_empty())
+# print(stack.peek())
+# print(stack)
+# stack.pop()
+# print(stack)
