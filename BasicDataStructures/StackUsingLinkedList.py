@@ -45,21 +45,21 @@ class Stack:
         return ''
 
 
-# stack = Stack()
-# print(stack.is_empty())
-# print(stack.peek())
-#
-# stack.push(1)
-# print(stack.peek())
-# stack.pop()
-# print(stack.is_empty())
-# print(stack.peek())
-# print(stack)
-#
-# stack.push(2)
-# stack.push(3)
-# print(stack.is_empty())
-# print(stack.peek())
-# print(stack)
-# stack.pop()
-# print(stack)
+stack = Stack()
+print(stack.is_empty())
+print(stack.peek())
+
+stack.push(1)
+print(stack.peek())
+stack.pop()
+print(stack.is_empty())
+print(stack.peek())
+print(stack)
+
+stack.push(2)
+stack.push(3)
+print(stack.is_empty())
+print(stack.peek())
+print(stack)
+stack.pop()
+print(stack)
